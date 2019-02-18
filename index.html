@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <link rel="stylesheet" href="./less/index.css">
+    <title>待办事项清单</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="page-group">
+            <div class="page page-current">
+                <!-- herder-top -->
+                <header class="bar bar-nav">
+                    <a class="icon icon-star pull-left"></a>
+                    <a class="icon icon-edit pull-right" @click="add"></a>
+                    <h1 class="title">待办事项清单</h1>
+                </header>
+                <!-- herder-end -->
+                <!-- content-top -->
+                <div class="content">
+                    <div class="card" v-for="(item,index) in newItems" :key="item.id">
+                        <div class="card-content">
+                            <div class="card-content-inner">
+                                <p>{{item.text}}</p>
+                                <div class="buttons-box">
+                                    <button class="icon icon-check button button-success" :class='[item.f?"button-fill":""]' @click="item.f= !item.f">
+                                </button>
+                                    <button class="icon icon-remove button button-danger" @click="opinion(index)"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- content-end -->
+                <!-- footer-top -->
+                <nav>
+                    <span class="buttonred circle" v-for="tab in tabBars" :key="tab.id" :class='["circle-"+tab.style,type==tab.text?"circle-fill":""]' @click="type=tab.text">
+                        {{tab.text}}
+                    </span>
+                </nav>
+                <!-- footer-end -->
+                <!-- mask -- start  -->
+                <div class="moder" v-show='bg' @click='bg = false'>
+                    <div class="moder-bg"></div>
+                    <div class="moder-inder">
+                        <p>未完成是否删除？</p>
+                        <button class="button button-fill pull-right" @click="bgremore(bgremoreindex)">确认</button>
+                    </div>
+                </div>
+                <!-- mask -- end  -->
+                <!--add-start-->
+                <div class="moder" v-show='adds'>
+                    <div class="moder-bg" @click="adds=false"></div>
+                    <div class="moder-add">
+                        <textarea name="" id="" cols="30" rows="10" v-model="addDate"></textarea>
+                        <button class="button button-fill pull-right" @click="addts">确认</button>
+                    </div>
+                </div>
+                <!--add-end-->
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="./js/index.js"></script>
+
+</html>

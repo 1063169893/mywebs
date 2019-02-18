@@ -1,0 +1,116 @@
+html,
+body {
+  height: 100%;
+}
+html .buttons-box,
+body .buttons-box {
+  display: flex;
+  justify-content: flex-end;
+}
+html .buttons-box button,
+body .buttons-box button {
+  margin-left: 10px;
+}
+html .circle.circle-success,
+body .circle.circle-success {
+  border-color: green;
+  color: green;
+}
+html .circle.circle-success.circle-fill,
+body .circle.circle-success.circle-fill {
+  background: green;
+  color: white;
+}
+html .circle.circle-primary,
+body .circle.circle-primary {
+  border-color: blue;
+  color: blue;
+}
+html .circle.circle-primary.circle-fill,
+body .circle.circle-primary.circle-fill {
+  background: blue;
+  color: white;
+}
+html .circle.circle-danger,
+body .circle.circle-danger {
+  border-color: red;
+  color: red;
+}
+html .circle.circle-danger.circle-fill,
+body .circle.circle-danger.circle-fill {
+  background: red;
+  color: white;
+}
+html .moder,
+body .moder {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 99;
+}
+html .moder .moder-bg,
+body .moder .moder-bg {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+}
+html .moder .moder-inder,
+body .moder .moder-inder {
+  padding: 0 15px;
+  background: #fff;
+  width: 80%;
+  height: 100px;
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 10px;
+}
+html .moder .moder-add,
+body .moder .moder-add {
+  width: 100%;
+  height: 100%;
+}
+html .moder .moder-add textarea,
+body .moder .moder-add textarea {
+  padding: 10px;
+  width: 90%;
+  height: 200px;
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 10px;
+}
+html .moder .moder-add button,
+body .moder .moder-add button {
+  position: absolute;
+  right: 45px;
+  bottom: 141px;
+}
+html nav,
+body nav {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 105;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+html nav .buttonred,
+body nav .buttonred {
+  width: 80px;
+  height: 80px;
+  border: #000 solid 1px;
+  text-align: center;
+  line-height: 80px;
+  border-radius: 50%;
+}
